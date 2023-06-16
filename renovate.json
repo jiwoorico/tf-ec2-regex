@@ -1,6 +1,24 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
+   "extends": [
     "config:base"
-  ]
+  ],
+  "regexManagers": [
+      {
+        "fileMatch": [
+          ".*abc$"
+        ],
+        "matchStrings": [
+          "ref=(?<currentValue>.*)\""
+        ],
+        "datasourceTemplate": "github-tags",
+        "depNameTemplate": "jiwoorico/tf-module-ec2.git"
+      },
+      {
+        "fileMatch": ["^Dockerfile$"],
+        "matchStrings": ["ENV YARN_VERSION=(?<currentValue>.*?)\\n"],
+        "depNameTemplate": "yarn",
+        "datasourceTemplate": "npm"
+      }
+    ]
 }
