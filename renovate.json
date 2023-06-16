@@ -12,7 +12,7 @@
           "ref=(?<currentValue>.*)\""
         ],
         "datasourceTemplate": "github-tags",
-        "depNameTemplate": "jiwoorico/tf-module-ec2.git"
+        "depNameTemplate": "jiwoorico/tf-module-ec2"
       },
       {
         "fileMatch": ["^Dockerfile$"],
